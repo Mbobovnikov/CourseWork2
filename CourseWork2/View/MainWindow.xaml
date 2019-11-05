@@ -10,7 +10,28 @@
     <Window.DataContext>
         <vm:ViewModelRes/>
     </Window.DataContext>
-    <Grid>
-        <Label x:Name="label" FontSize="30" Content="{Binding HelloString}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.RowSpan="3" >
+            <Button>Список жильцов</Button>
+            <Button>Добивить жильца</Button>
+            <Button>Список комнат</Button>
+            <Button></Button>
+            <Button></Button>
+        </StackPanel>
     </Grid>
 </Window>

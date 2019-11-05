@@ -11,36 +11,70 @@ namespace CourseWork2.ViewModel
 {
    public class ViewModelRes: INotifyPropertyChanged
     {
-        private string helloString;
+        private string FirstName;
+        private string SecondName;
+        private string PatronymicResident;
+        private string InformationAboutResident;
+        private int AgeResident;
+        private int RoomNumber;
+        private bool SexResident;
+       
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string HelloString
-        {
-            get
-            {
-                return helloString;
-            }
-            set
-            {
-                helloString = value;
-                OnPropertyChanged();
-            }
-        }
-
-        /// <summary>
-        /// Raises OnPropertychangedEvent when property changes
-        /// </summary>
-        /// <param name="name">String representing the property name</param>
+       
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+       
 
-        public ViewModelRes()
+        public string Firstname
         {
-            CourseResitens helloWorldModel = new CourseResitens();
-            helloString = helloWorldModel.ImportantInfo;
+            get { return FirstName; }
+            set { FirstName = value; OnPropertyChanged("FirstName"); }
         }
-    }
+
+        public string Secondname
+        {
+            get { return SecondName; }
+            set { SecondName = value; OnPropertyChanged("SecondName"); }
+
+        }
+
+        public string Patronymicresident
+        {
+            get { return PatronymicResident; }
+            set { PatronymicResident = value; OnPropertyChanged("PatronymicResident"); }
+        }
+
+        public string Infomation
+        {
+            get { return InformationAboutResident; }
+            set { InformationAboutResident = value; OnPropertyChanged("InformationAboutResident"); }
+        }
+
+        public int Ageresident
+        {
+            get { return AgeResident; }
+            set { AgeResident = value; OnPropertyChanged("AgeResident"); }
+        }
+
+        public int Roomnumber
+        {
+            get { return RoomNumber; }
+            set { RoomNumber = value; OnPropertyChanged("RoomNumber"); }
+        }
+
+        public bool Sexresident
+        {
+            get { return SexResident; }
+            set { SexResident = value; OnPropertyChanged("SexResident"); }
+        }
+
+
+   }
+
+         
 }
